@@ -7,6 +7,7 @@ import { MaterialModule } from './common/material.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerDialog } from './customer/dialog/customer-dialog.component';
@@ -26,6 +27,7 @@ import { CustomerDialog } from './customer/dialog/customer-dialog.component';
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     CustomerComponent,
     CustomerDialog
   ],
