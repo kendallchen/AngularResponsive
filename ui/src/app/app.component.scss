@@ -1,8 +1,24 @@
 
+#body { 
+    display: grid;
+    grid: min-content auto min-content / repeat(12, 1fr);
+    height: 100%;
+}
+
+header,
+footer {
+    grid-column-start: 1;
+    grid-column-end: 13;
+}
+
 header {
     width: 100%;
     background-color: #1976d2;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
+    padding: 1rem;
+}
+
+footer {
+    width: 100%;
+    background-color: #1976d2;
+    padding: 1rem;
 }
