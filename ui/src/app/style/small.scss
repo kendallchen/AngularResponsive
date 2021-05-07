@@ -1,0 +1,38 @@
+
+* {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+app-top-bar {
+    width: 100%;
+    background-color: #1976d2;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    h1 {
+        color: white;
+    }
+}
+
+button {
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.5rem;
+    cursor: pointer;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+  
