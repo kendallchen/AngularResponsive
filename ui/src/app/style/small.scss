@@ -1,23 +1,12 @@
-
 * {
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
-}
-
-app-top-bar {
-    width: 100%;
-    background-color: #1976d2;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    h1 {
-        color: white;
-    }
 }
 
 button {
@@ -33,6 +22,3 @@ button {
 button:hover {
     opacity: 0.8;
 }
-
-
-  
