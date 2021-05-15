@@ -3,5 +3,4 @@
 /api/Data/bin
 /api/Data/obj
 /api/.vs
-/ui/.vscode
 /ui/node_modules
