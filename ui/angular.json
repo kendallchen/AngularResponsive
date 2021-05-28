@@ -29,6 +29,7 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/app/style/normalize.scss",
+              "src/app/style/variable.scss",
               "src/app/style/small.scss",
               "src/app/style/medium.scss",
               "src/app/style/large.scss"
