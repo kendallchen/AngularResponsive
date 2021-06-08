@@ -1,5 +1,14 @@
 
-    h1 {
-        color: white;
-        margin: 0rem;
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .item{
+        margin: 0.5rem;
     }
+}
+
+h1 {
+    color: white;
+}

@@ -1,3 +1,5 @@
+@import 'style/variable.scss';
+
 
 #body { 
     display: grid;
@@ -12,13 +14,10 @@ footer {
 
 header {
     width: 100%;
-    background-color: #1976d2;
-    padding: 1rem;
+    background-color: $primary-color;
 }
 
 footer {
     width: 100%;
-    background-color: #1976d2;
-    display: flex;
-    justify-content: center;
+    background-color: $primary-color;
 }
