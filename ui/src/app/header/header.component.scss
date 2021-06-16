@@ -1,3 +1,6 @@
+h1 {
+    color: white;
+}
 
 .container {
     display: flex;
@@ -9,10 +12,6 @@
     }
 }
 
-h1 {
-    color: white;
-}
-
 .menu-button{
     min-width: 0;
     padding: 0;
@@ -20,5 +19,9 @@ h1 {
 
     mat-icon {
         color: white
+    }
+
+    @media (min-width: 720px){
+        display: none;
     }
 }
