@@ -12,9 +12,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerDialog } from './customer/dialog/customer-dialog.component';
+import { MainComponent } from './main/main.component';
 
-const routes: Routes = [{ path: '', component: HomeComponent },
-                        { path: 'customer', component: CustomerComponent}];
+const routes: Routes = [{ path: '', 
+                          component: MainComponent,
+                          children: [
+                            { path: '', component: HomeComponent },
+                            { path: 'customer', component: CustomerComponent }
+                          ]}];
 
 @NgModule({
   imports: [
@@ -32,7 +37,8 @@ const routes: Routes = [{ path: '', component: HomeComponent },
     FooterComponent,
     CustomerComponent,
     CustomerDialog,
-    HomeComponent
+    HomeComponent,
+    MainComponent
   ],
   bootstrap: [ AppComponent ]
 })

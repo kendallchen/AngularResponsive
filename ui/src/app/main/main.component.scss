@@ -1,0 +1,10 @@
+@import '../style/variable';
+
+.menu-button {
+    color: $primary-color;
+    font-size: 1.2rem;
+
+    mat-icon {
+        margin-right: 0.3rem;
+    }
+}
