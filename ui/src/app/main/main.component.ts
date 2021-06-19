@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+    templateUrl: './main.component.html',
+    styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainComponent implements OnInit { 
 
-  constructor() { }
+    showSideNav: boolean = false;
 
-  ngOnInit(): void {
-  }
+    constructor(private breakPointObserver: BreakpointObserver) { }
+
+    ngOnInit(): void {
+        this.breakPointObserver
+            .observe(['(min-width: 768px)'])
+            .subscribe((state: BreakpointState) => {
+                this.showSideNav = state.matches;
+            });
+    }
 
 }

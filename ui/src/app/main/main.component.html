@@ -1,8 +1,7 @@
 
 <mat-sidenav-container>
-    <mat-sidenav mode="side" opened>
+    <mat-sidenav #sidenav [opened]="showSideNav" [mode]="showSideNav ? 'side' : 'over'"> 
   
-
         <button mat-button class="menu-button">
             <mat-icon>home</mat-icon>
             <span>Home</span>
