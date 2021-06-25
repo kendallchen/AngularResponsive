@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { MenuService } from '../service/menu.service';
 import { MatSidenav } from '@angular/material/sidenav';
@@ -14,7 +15,8 @@ export class MainComponent implements OnInit {
     @ViewChild('sidenav') sidenav: MatSidenav;
 
     constructor(private breakPointObserver: BreakpointObserver,
-                private menuService: MenuService) { }
+                private menuService: MenuService,
+                private router: Router) { }
 
     ngOnInit(): void {
         this.breakPointObserver
@@ -27,5 +29,21 @@ export class MainComponent implements OnInit {
             this.sidenav.toggle();
         });
     }
+
+    homeClick(){
+        this.toggleMenu();
+        this.router.navigate(['/']);
+    }
+
+    customerClick(){
+        this.toggleMenu();
+        this.router.navigate(['/customer']); 
+    }
+
+    toggleMenu(){
+        if (!this.showSideNav) //if small screen
+            this.menuService.toggleMenu();
+    }
+    
 
 }

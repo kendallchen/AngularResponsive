@@ -1,12 +1,16 @@
 
 <mat-sidenav-container>
     <mat-sidenav #sidenav [opened]="showSideNav" [mode]="showSideNav ? 'side' : 'over'"> 
-  
-        <button mat-button class="menu-button">
-            <mat-icon>home</mat-icon>
-            <span>Home</span>
-        </button>
-
+        <div class="menu-container">
+            <button mat-button class="menu-button" (click)="homeClick()">
+                <mat-icon>home</mat-icon>
+                <span>Home</span>
+            </button>
+            <button mat-button class="menu-button" (click)="customerClick()">
+                <mat-icon>contacts</mat-icon>
+                <span>Customer</span>
+            </button>
+        </div>
     </mat-sidenav>
     <mat-sidenav-content>
         <router-outlet></router-outlet>
