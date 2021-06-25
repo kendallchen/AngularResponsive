@@ -14,6 +14,8 @@ export class MainComponent implements OnInit {
     showSideNav: boolean = false;
     @ViewChild('sidenav') sidenav: MatSidenav;
 
+    location: string = 'home';
+
     constructor(private breakPointObserver: BreakpointObserver,
                 private menuService: MenuService,
                 private router: Router) { }
@@ -33,17 +35,18 @@ export class MainComponent implements OnInit {
     homeClick(){
         this.toggleMenu();
         this.router.navigate(['/']);
+        this.location = 'home';
     }
 
     customerClick(){
         this.toggleMenu();
         this.router.navigate(['/customer']); 
+        this.location = 'customer';
     }
 
     toggleMenu(){
         if (!this.showSideNav) //if small screen
             this.menuService.toggleMenu();
     }
-    
 
 }

@@ -2,10 +2,10 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav [opened]="showSideNav" [mode]="showSideNav ? 'side' : 'over'"> 
         <div class="menu-container">
-            <button mat-button class="menu-button" (click)="homeClick()">                
+            <button mat-button class="menu-button" (click)="homeClick()" [ngClass]="location == 'home' ? 'selected-menu': null">                
                 <span class="button-item"><mat-icon>home</mat-icon>Home</span>
             </button>
-            <button mat-button class="menu-button" (click)="customerClick()">                
+            <button mat-button class="menu-button" (click)="customerClick()" [ngClass]="location == 'customer' ? 'selected-menu': null">                
                 <span class="button-item"><mat-icon>contacts</mat-icon>Customer</span>
             </button>
         </div>
