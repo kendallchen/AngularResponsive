@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { MenuService } from '../service/menu.service';
+import { MatSidenav } from '@angular/material/sidenav';
 
 
 @Component({
@@ -9,8 +11,10 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 export class MainComponent implements OnInit { 
 
     showSideNav: boolean = false;
+    @ViewChild('sidenav') sidenav: MatSidenav;
 
-    constructor(private breakPointObserver: BreakpointObserver) { }
+    constructor(private breakPointObserver: BreakpointObserver,
+                private menuService: MenuService) { }
 
     ngOnInit(): void {
         this.breakPointObserver
@@ -18,6 +22,10 @@ export class MainComponent implements OnInit {
             .subscribe((state: BreakpointState) => {
                 this.showSideNav = state.matches;
             });
+
+        this.menuService.menuToggle$.subscribe(()=>{
+            this.sidenav.toggle();
+        });
     }
 
 }
