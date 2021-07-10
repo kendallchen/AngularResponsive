@@ -34,14 +34,22 @@ export class MainComponent implements OnInit {
 
     homeClick(){
         this.toggleMenu();
-        this.router.navigate(['/']);
         this.location = 'home';
     }
 
     customerClick(){
         this.toggleMenu();
-        this.router.navigate(['/customer']); 
         this.location = 'customer';
+    }
+
+    page1Click(){
+        this.toggleMenu();
+        this.location = 'aboutUs'
+    }
+
+    page2Click(){
+        this.toggleMenu();
+        this.location = 'aboutUs'
     }
 
     toggleMenu(){

@@ -1,25 +1,14 @@
 @import '../style/variable';
 
-.menu-button {
+mat-nav-list a, 
+mat-list-item, 
+mat-icon{
     color: $primary-color;
-    font-size: 1.2rem;
-
-    mat-icon {
-        margin-right: 0.3rem;
-    }
-}
-
-.menu-container {
-    display: flex;
-    flex-direction: column;
 }
 
 .selected-menu{
     background-color: $secondary-color;
 }
 
-.button-item{
-    display: flex; 
-    align-items: center;
-}
+
 
