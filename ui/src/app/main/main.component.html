@@ -2,28 +2,31 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav [opened]="showSideNav" [mode]="showSideNav ? 'side' : 'over'">      
         <mat-nav-list>
-            <div [ngClass]="location == 'home' ? 'selected-menu': null">
-                <a mat-list-item routerLink="/" (click)="homeClick()" >
-                    <mat-icon>home</mat-icon><span>Home</span>
-                </a>
-            </div>
-            <div [ngClass]="location == 'customer' ? 'selected-menu': null">
-                <a mat-list-item routerLink="/customer" (click)="customerClick()" >
-                    <mat-icon>contacts</mat-icon><span>Customer</span>   
-                </a>
-            </div>
-            <mat-list-item [matMenuTriggerFor]="subMenu" [ngClass]="location == 'aboutUs' ? 'selected-menu': null">
-                <mat-icon>unfold_more</mat-icon>
-                <a>About Us</a>
+            <mat-list-item (click)="homeClick()" [ngClass]="selectedMenuItem == 'home' ? 'selected-menu-item': null">
+                <span>Home</span>
+                <mat-icon mat-list-icon>home</mat-icon>
             </mat-list-item>
-            <mat-menu #subMenu>
-                <a mat-menu-item (click)="page1Click()">
-                    <mat-icon>contacts</mat-icon><span>Page1</span>   
-                </a>
-                <a mat-menu-item (click)="page2Click()">
-                    <mat-icon>contacts</mat-icon><span>Page2</span>   
-                </a>
-            </mat-menu>
+            <mat-list-item (click)="customerClick()" [ngClass]="selectedMenuItem == 'customer' ? 'selected-menu-item': null">
+                <span>Customer</span>
+                <mat-icon mat-list-icon>contacts</mat-icon>
+            </mat-list-item>
+            <mat-list-item (click)="showMenuX = !showMenuX">
+				<span>Menu X</span>
+				<mat-icon mat-list-icon>home</mat-icon>
+				<mat-icon class="menu-button" [ngClass]="{'rotated' : showMenuX}">expand_more</mat-icon>
+			</mat-list-item>
+			<div class="submenu" [ngClass]="{'expanded' : showMenuX}">
+				<mat-list-item>Item 1</mat-list-item>
+				<mat-list-item>Item 2</mat-list-item>
+				<mat-list-item (click)="showMenuY = !showMenuY">
+					<span>Menu Y</span>
+					<mat-icon class="menu-button" [ngClass]="{'rotated' : showMenuY}">expand_more</mat-icon>
+				</mat-list-item>
+				<div class="submenu" [ngClass]="{'expanded' : showMenuY}">
+					<mat-list-item>Item 3</mat-list-item>
+					<mat-list-item>Item 4</mat-list-item>
+				</div>
+			</div>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

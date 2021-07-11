@@ -1,14 +1,30 @@
 @import '../style/variable';
 
-mat-nav-list a, 
-mat-list-item, 
+
 mat-icon{
     color: $primary-color;
 }
 
-.selected-menu{
+.selected-menu-item{
     background-color: $secondary-color;
 }
 
+.menu-button {
+    transition: 300ms;
+}
 
+.menu-button.rotated {
+    transform: rotate(180deg);
+}
 
+.submenu {
+    overflow-y: hidden;
+    transition: transform 300ms;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 2rem;
+}
+
+.submenu.expanded {
+    transform: scaleY(1);
+}

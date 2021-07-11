@@ -14,7 +14,12 @@ export class MainComponent implements OnInit {
     showSideNav: boolean = false;
     @ViewChild('sidenav') sidenav: MatSidenav;
 
-    location: string = 'home';
+    //for tracking if the submenu is shown
+    showMenuX: boolean = false;
+    showMenuY: boolean = false;
+
+    //for tracking location of currently selected menu item
+    selectedMenuItem: string = 'home';    
 
     constructor(private breakPointObserver: BreakpointObserver,
                 private menuService: MenuService,
@@ -33,23 +38,25 @@ export class MainComponent implements OnInit {
     }
 
     homeClick(){
+        this.router.navigate(['/']);
         this.toggleMenu();
-        this.location = 'home';
+        this.selectedMenuItem = 'home';
     }
 
     customerClick(){
+        this.router.navigate(['/customer']);
         this.toggleMenu();
-        this.location = 'customer';
+        this.selectedMenuItem = 'customer';
     }
 
     page1Click(){
         this.toggleMenu();
-        this.location = 'aboutUs'
+        this.selectedMenuItem = 'aboutUs'
     }
 
     page2Click(){
         this.toggleMenu();
-        this.location = 'aboutUs'
+        this.selectedMenuItem = 'aboutUs'
     }
 
     toggleMenu(){
