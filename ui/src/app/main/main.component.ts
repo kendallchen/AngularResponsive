@@ -49,16 +49,6 @@ export class MainComponent implements OnInit {
         this.selectedMenuItem = 'customer';
     }
 
-    page1Click(){
-        this.toggleMenu();
-        this.selectedMenuItem = 'aboutUs'
-    }
-
-    page2Click(){
-        this.toggleMenu();
-        this.selectedMenuItem = 'aboutUs'
-    }
-
     toggleMenu(){
         if (!this.showSideNav) //if small screen
             this.menuService.toggleMenu();

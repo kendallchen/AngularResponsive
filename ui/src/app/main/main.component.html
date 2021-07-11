@@ -12,19 +12,20 @@
             </mat-list-item>
             <mat-list-item (click)="showMenuX = !showMenuX">
 				<span>Menu X</span>
-				<mat-icon mat-list-icon>home</mat-icon>
+				<mat-icon mat-list-icon>all_inclusive</mat-icon>
 				<mat-icon class="menu-button" [ngClass]="{'rotated' : showMenuX}">expand_more</mat-icon>
 			</mat-list-item>
 			<div class="submenu" [ngClass]="{'expanded' : showMenuX}">
-				<mat-list-item>Item 1</mat-list-item>
-				<mat-list-item>Item 2</mat-list-item>
+				<mat-list-item><mat-icon mat-list-icon>bedtime</mat-icon>Item 1</mat-list-item>
+				<mat-list-item><mat-icon mat-list-icon>bolt</mat-icon>Item 2</mat-list-item>
 				<mat-list-item (click)="showMenuY = !showMenuY">
 					<span>Menu Y</span>
+                    <mat-icon mat-list-icon>assignment</mat-icon>
 					<mat-icon class="menu-button" [ngClass]="{'rotated' : showMenuY}">expand_more</mat-icon>
 				</mat-list-item>
 				<div class="submenu" [ngClass]="{'expanded' : showMenuY}">
-					<mat-list-item>Item 3</mat-list-item>
-					<mat-list-item>Item 4</mat-list-item>
+					<mat-list-item><mat-icon mat-list-icon>brush</mat-icon>Item 3</mat-list-item>
+					<mat-list-item><mat-icon mat-list-icon>call</mat-icon>Item 4</mat-list-item>
 				</div>
 			</div>
         </mat-nav-list>
