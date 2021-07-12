@@ -1,9 +1,9 @@
-<div class="container">
+<div class="customer">
     <h1>Customers</h1>
     <button color="primary" (click)="openAddDialog()">
         <mat-icon aria-hidden="false" aria-label="Add">add</mat-icon>
     </button>
-    <table mat-table [dataSource]="customerList" style="width:400px">
+    <table mat-table [dataSource]="customerList">
         <ng-container matColumnDef="customerId">
             <th mat-header-cell *matHeaderCellDef> Customer ID </th>
             <td mat-cell *matCellDef="let element"> {{element.customerId}} </td>
@@ -19,10 +19,10 @@
         <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let element" class="action-link">
-                <button color="primary" (click)="openEditDialog(element)" class="mx-1">
+                <button color="primary" (click)="openEditDialog(element)" class="cell-button">
                     <mat-icon aria-hidden="false" aria-label="Edit">edit</mat-icon>
                 </button>
-                <button color="primary" (click)="delete(element)" class="mx-1">
+                <button color="primary" (click)="delete(element)" class="cell-button">
                     <mat-icon aria-hidden="false" aria-label="Delete">delete</mat-icon>
                 </button>
             </td>

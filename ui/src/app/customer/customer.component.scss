@@ -1,12 +1,8 @@
 
-.container{
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.customer {
+    margin: 1rem 0 0 1rem;
+}
 
-    button, table {
-        margin-top: 0.5rem;
-    }
-    
+.cell-button {
+    margin-right: .2rem;
 }
